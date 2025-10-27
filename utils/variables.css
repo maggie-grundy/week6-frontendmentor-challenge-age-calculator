@@ -1,0 +1,60 @@
+/*Load custom fonts */
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Italic.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-BoldItalic.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 800;
+  font-style: italic;
+}
+
+/*Colors*/
+:root {
+  --color-primary1: hsl(259, 100%, 65%);
+  --color-primary2: hsl(0, 100%, 67%);
+
+  --color-white: hsl(0, 100%, 100%);
+  --color-gray-100: hsl(0, 0%, 94%);
+  --color-gray-200: hsl(0, 0%, 86%);
+  --color-gray-500: hsl(0, 1%, 44%);
+  --color-black: hsl(0, 0%, 0%);
+}

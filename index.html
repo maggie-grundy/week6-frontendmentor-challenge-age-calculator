@@ -7,31 +7,86 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!--I think this one just needs one stylesheet!-->
+  <link rel="stylesheet" href="./styles/mobile.styles.css">
 </head>
 <body>
 
-  Day
-  DD
+ <!--Calculator container w/ BEM-->
+  <main class="calculator">
+   
+    <section class="calculator__top">
+      <form class="calculator__form">
+        <div class="calculator__input-group">
+          <div class="calculator__input-field">
+            <label for="day" class="calculator__label">DAY</label>
+            <input 
+            class="calculator__input"
+            type="number" 
+            id="day" 
+            name="day" 
+            placeholder="DD" 
+            min="1" 
+            max="31" 
+            required
+            />
+          </div>
+          <div class="calculator__input-field">
+            <label for="month" class="calculator__label">MONTH</label>
+            <input 
+            type="number" 
+            class="calculator__input" 
+            id="month" 
+            name="month" 
+            placeholder="MM" 
+            min="1" 
+            max="12" 
+            required
+            />
+          </div>
+          <div class="calculator__input-field">
+            <label for="year" class="calculator__label">YEAR</label>
+            <input 
+            type="number" 
+            class="calculator__input" 
+            id="year" 
+            name="year" 
+            placeholder="YYYY" 
+            min="1900" 
+            max="2024" 
+            required>
+          </div>
+        </div>
+    </section>
+    <div class="calculator__divider-wrapper">
+    <hr class="calculator__divider">
+    <!--Purple icon button-->
+    <button class="calculator__button" type="button" id="myButton">
+      <img src="./assets/images/icon-arrow.svg" alt="arrow icon" width="50%">
+    </button>
+  </div>
+  </form>
+    <section class="calculator__bottom">
+      <div class="calculator__results">
+        <div class="calculator__years">
+        <p><span class="calculator__value">--</span>&nbsp;years</p>
+        </div>
+        <div class="calculator__months">
+        <p><span class="calculator__value">--</span>&nbsp;months</p>
+        </div>
+        <div class="calculator__days">
+        <p><span class="calculator__value">--</span>&nbsp;days</p>
+        </div>
+      </div>
 
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
+    </section>
+ </main>
+  <div id="errorMessage"></div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">MG</a>.
   </div>
+
+  <script src="./scripts/main.js"></script>
 </body>
 </html>

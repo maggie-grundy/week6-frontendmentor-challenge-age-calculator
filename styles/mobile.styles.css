@@ -1,0 +1,203 @@
+/*Import variables */
+@import "../utils/variables.css";
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*Attribution styles */
+.attribution {
+  font-size: 11px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.attribution a {
+  color: var(--color-primary1);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Remove arrows from input fields */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  background-color: var(--color-gray-100);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* Centers container, credit div lower? check */
+  gap: 1.5rem;
+}
+
+main {
+  background-color: var(--color-gray-200);
+  margin-top: 7.5rem;
+}
+
+.calculator {
+  width: 90%;
+  max-width: 400px;
+  min-width: 375px;
+  /* min-height: 300px; */
+  background-color: var(--color-white);
+  border-bottom-right-radius: 10rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 2.8rem;
+  
+}
+
+/*Input positioning to create two rows with labels on top */
+.calculator__input-group {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem 1.5rem;
+  justify-content: start;
+  justify-items: start;
+  color: var(--color-gray-500);
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.calculator__input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator__label {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 0.7rem;
+  /*Widened letter-spacing for labels */
+  letter-spacing: 2.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.calculator__input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: black;
+  border-radius: 0.4rem;
+  border: 1px solid var(--color-gray-200);
+  width: 8rem;
+  padding: 0.9rem;
+  /* margin-bottom: 2rem; */
+}
+
+.calculator__divider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator__divider {
+  border: none;
+  border-top: 1px solid var(--color-gray-200);
+  width: 100%;
+}
+
+/*Styles and positioning for button*/
+.calculator__button {
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 40%);
+  background-color: var(--color-primary1);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.15s ease, transform 0.3s ease, filter 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+/*Just some fun effects for the button on*/
+
+.calculator__button:hover,
+.calculator__button:focus {
+  filter: brightness(1.15) hue-rotate(30deg);
+  /* transform: scale(0.95); */
+}
+
+.calculator__button:active {
+  filter: hue-rotate(0deg);
+}
+
+.calculator__results {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+/*Tighten results line-spacing*/
+.calculator__results p {
+  margin: 0;
+  line-height: 1;
+}
+
+.calculator__years,
+.calculator__months,
+.calculator__days {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 4.5rem;
+}
+
+.calculator__value {
+  color: var(--color-primary1);
+}
+
+/*For screens 1440px and wider*/
+@media (min-width: 1440px) {
+  /*push button to right on larger displays*/
+  /* .calculator__divider-wrapper {
+    justify-content: flex-end;
+  } */
+
+  .calculator__button {
+    position: absolute;
+    bottom: 0;
+    left: clamp(50%, 65vw, calc(100% - 6rem));
+    right: 0;
+    transform: translate(20%, 40%);
+    }
+}
