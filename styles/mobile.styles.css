@@ -186,6 +186,24 @@ main {
   color: var(--color-primary1);
 }
 
+/*error styles*/
+.error {
+  border-color: red !important;
+}
+
+.error-label {
+  color: red !important;
+}
+
+.error-message {
+  color: red;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+
+
 /*For screens 1440px and wider*/
 @media (min-width: 1440px) {
   /*push button to right on larger displays*/
@@ -201,3 +219,5 @@ main {
     transform: translate(20%, 40%);
     }
 }
+
+
